@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Paper reader",
+    "description": "Read a PDF paper on its own page with zoom, page navigation and text highlights, and right-click any passage to ask DeepSeek in a right-side column.",
+    "detail": "docs/DETAIL.md"
+  }
+}

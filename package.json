@@ -1,0 +1,77 @@
+{
+  "name": "dsh-pdf-paper-reader",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: read PDF papers on a dedicated page with zoom, page navigation, highlights, reading history, and right-click Q&A with DeepSeek in a right-side column.",
+  "license": "MIT",
+  "author": "Paper reader contributors",
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "deepseek-harness",
+    "plugin",
+    "pdf",
+    "paper",
+    "reader",
+    "katex",
+    "annotation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2025-pyh/dsh-pdf-paper-reader.git"
+  },
+  "homepage": "https://github.com/2025-pyh/dsh-pdf-paper-reader#readme",
+  "bugs": {
+    "url": "https://github.com/2025-pyh/dsh-pdf-paper-reader/issues"
+  },
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "client.pdfjs.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "LICENSE-pdfjs.txt",
+    "LICENSE-katex.txt"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "node build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.2-rc.3"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "katex": "0.16.25",
+    "pdfjs-dist": "6.3.289"
+  }
+}

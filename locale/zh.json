@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "论文阅读",
+    "description": "在独立页面里阅读 PDF 论文，支持缩放、翻页与高亮标注；选中任意段落右击即可问 DeepSeek，答案立刻显示在右侧栏里。",
+    "detail": "docs/DETAIL.md"
+  }
+}

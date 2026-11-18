@@ -1,0 +1,9 @@
+node_modules/
+build/
+.verify/
+*.tgz
+src/pdf/assets.generated.js
+src/pdf/katex.generated.js
+*.log
+.DS_Store
+Thumbs.db
